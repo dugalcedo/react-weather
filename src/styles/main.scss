@@ -1,0 +1,86 @@
+@use 'var' as *;
+@use 'breakpoints' as *;
+@use 'weatherApp' as *;
+
+@font-face {
+    font-family: "REM";
+    src: url("./REM-Regular.ttf");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "REM";
+    src: url("./REM-Italic.ttf");
+    font-style: italic;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "REM", sans-serif;
+}
+
+html, body, #root {
+    height: 100dvh;
+}
+
+body {
+    background-color: $bg;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+header, main, footer {
+    width: 1000px;
+    max-width: calc(100% - 2rem);
+    margin: auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    @include card();
+}
+
+main {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+#main-nav {
+    & li {
+        list-style: none;
+    }
+}
+
+input {
+    background-color: $lite-bg;
+    border: 0;
+    padding: .5rem;
+    border-radius: .25rem;
+
+    &:focus {
+        outline: 3px solid $card-bg;
+    }
+}
+
+button {
+    background-color: $card-bg;
+    border: 0;
+    padding: .5rem;
+    border-radius: .25rem;
+    cursor: pointer;
+    &:hover {
+        background-color: $lite-bg;
+    }
+    &:focus {
+        outline: 3px solid rgba(0,0,0,0.2);
+    }
+}

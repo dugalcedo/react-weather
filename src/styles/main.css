@@ -1,0 +1,172 @@
+#location-search, .current, .dailies, .hourlies-container {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#location-search {
+  display: flex;
+  justify-content: center;
+}
+#location-search .field {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.loc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.dailies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.dailies .daily {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+.dailies .daily .date {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.hourlies-container {
+  height: 150px;
+  background-color: white;
+  display: flex;
+}
+
+.hourlies-y {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+}
+
+.hourlies {
+  flex-grow: 1;
+  display: flex;
+}
+@media only screen and (max-width: 1000px) {
+  .hourlies .hourly:nth-child(n+8) {
+    display: none;
+  }
+}
+@media only screen and (max-width: 666px) {
+  .hourlies .hourly:nth-child(n+5) {
+    display: none;
+  }
+}
+
+.hourly {
+  position: relative;
+  flex-grow: 1;
+}
+.hourly .dot {
+  padding: 0.25rem;
+  position: absolute;
+  bottom: 0;
+  border: 1px solid white;
+  width: 100%;
+  height: 10px;
+  line-height: 95%;
+}
+.hourly .dot .p {
+  font-size: 0.8rem;
+}
+.hourly .dot .temp {
+  font-size: 1.33rem;
+  font-weight: bold;
+}
+.hourly .dot .date {
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "REM";
+  src: url("./REM-Regular.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "REM";
+  src: url("./REM-Italic.ttf");
+  font-style: italic;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "REM", sans-serif;
+}
+
+html, body, #root {
+  height: 100dvh;
+}
+
+body {
+  background-color: #a5ffff;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+header, main, footer {
+  width: 1000px;
+  max-width: calc(100% - 2rem);
+  margin: auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+main {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+#main-nav li {
+  list-style: none;
+}
+
+input {
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+}
+input:focus {
+  outline: 3px solid rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+button:focus {
+  outline: 3px solid rgba(0, 0, 0, 0.2);
+}/*# sourceMappingURL=main.css.map */
